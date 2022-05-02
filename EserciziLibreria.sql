@@ -35,4 +35,3 @@ order by Autore.Cognome, Autore.Nome, Romanzo.AnnoPubblicazione
 select Romanzo.Titolo, Romanzo.AnnoPubblicazione
 from Romanzo, Autore
 where Romanzo.Autore = Autore.ID and Autore.DataMorte = null
-
