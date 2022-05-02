@@ -18,3 +18,8 @@ select Romanzo .Titolo, Autore.Nome, Autore.Cognome
 from Romanzo, Autore
 where Romanzo.Autore and Autore.Nazionalità= "Russo"
 order by Autore.Cognome , Autore.Nome
+
+select Romanzo.Titolo
+from Romanzo, Autore
+where Romanzo.Autore = Autore.ID and Autore.DataNascita >=1900 and Autore.DataNascita <=2000
+order by Autore.Cognome, Autore.Nome, Romanzo.AnnoPubblicazione
