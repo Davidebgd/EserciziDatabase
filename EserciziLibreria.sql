@@ -5,6 +5,14 @@ select Romanzo.Titolo
 from Romanzo
 where Romanzo.AnnoPubblicazione = 2011
 
+select Romanzo.Titolo
+from Romanzo
+where Romanzo.AnnoPubblicazione >=1990
+
+select Romanzo.Titolo
+from Romanzo, Autore
+where Romanzo.AnnoPubblicazione >=1900 and  Romanzo.AnnoPubblicazione<=2000
+
 select Romanzo.Titolo, Autore.Nome,Autore.Cognome
 from Romanzo, Autore
 where
