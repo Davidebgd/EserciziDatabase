@@ -23,3 +23,7 @@ select Romanzo.Titolo
 from Romanzo, Autore
 where Romanzo.Autore = Autore.ID and Autore.DataNascita >=1900 and Autore.DataNascita <=2000
 order by Autore.Cognome, Autore.Nome, Romanzo.AnnoPubblicazione
+
+select Romanzo.Titolo, Romanzo.AnnoPubblicazione
+from Romanzo, Autore
+where Romanzo.Autore = Autore.ID and Autore.DataMorte = null
