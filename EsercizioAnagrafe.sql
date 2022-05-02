@@ -9,3 +9,7 @@ select p1.Nome, p2.Nome, Persona.CittàNascita
 from Persona p1 join Genia g on p1.Nome = g.Figlio
     join Persona p2 on p2.Nome = g.Genitore
 where p1.CittàNascita = p2.CittàNascita
+
+select Genia.Genitore,Persona.CittàNascita
+from Genia join Persona on Persona.Nome = Genia.Genitore
+where Persona.Età >=50
