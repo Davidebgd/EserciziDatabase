@@ -32,3 +32,8 @@ from Autore join Programmatore on Autore.codice=Programmatore.codice
     join Programma on Autore.id=Programma.id
 where Programmatore.codice=Autore.codice and Autore.id=Programma.id
 group by Programma.anno, Autore.codice
+
+/* ES 7 */
+select Programma.linguaggio, count(distinct Autore.codice)
+from Programma join Autore on Programma.id=Autore.id 
+group by Programma.linguaggio
