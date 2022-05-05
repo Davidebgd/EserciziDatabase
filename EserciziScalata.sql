@@ -49,3 +49,14 @@ FROM Scalata join Nazione on Scalata.nazione = Nazione.nome
 WHERE Scalatore.nazioneNascita != Scalata.nazione
 group by Scalata.anno, Nazione.nome
 ORDER BY Nazione.nome
+
+/*     ES 9     */
+SELECT Scalatore.cf
+FROM  Scalatore
+where Scalatore.cf  in
+        (select distinct Scalatore.cf
+        FROM Scalatore join Scalata on Scalata.scalatore=Scalatore.cf
+        WHERE Scalatore.nazioneNascita = Scalata.Nazione 
+            and  Scalata.anno - Scalatore.annoNascita < 18
+        )
+    
